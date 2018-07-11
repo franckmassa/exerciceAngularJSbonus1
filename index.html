@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js"></script>
+  <title>Exercice1</title>
+</head>
+<body >
+  <form ng-app name="formulaire">
+    <label>Email Adress:</label><input type="email" name="userEmail" ng-model="userEmail" required />
+    <!--Afficher une div rouge si le champs email a une adresse non-valide-->
+    <div ng-hide="formulaire.userEmail.$valid" ng-show="formulaire.userEmail.$error" id="red"></div>
+    <!--Afficher une div verte si le champs email a une adresse valide-->
+    <div ng-show="formulaire.userEmail.$valid" ng-hide="formulaire.userEmail.$error" id="green"></div>
+  </form>
+</body>
+</html>
